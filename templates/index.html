@@ -1,0 +1,26 @@
+<html>
+<head>
+	<title>welcome to wilsons website</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<script>
+		if(navigator.mediaDevices.getUserMedia){
+			navigator.mediaDevices.getUserMedia({video:true})
+				.then()
+				.catch()
+			}
+	</script>
+	<marquee>
+	<h1>{{user}}s world :)</h1>
+	<p>welcome to {{user}}s world!</p>
+	</marquee>
+	<marquee>
+    {% for user in users %}
+	    <p>im {{user}}, a {{ loop.cycle('computer science', 'computer engineering', 'human centered computing', 'packaging science') }} kid at rit. im also the {{currentyear}} <a href="https://csh.rit.edu">csh</a> rnd director</p>
+    {% endfor %}
+	<p><a href="https://wmcda.de">heres my real website</a></p>
+	<img src="wilson.png" alt="wilson">
+	</marquee>
+</body>
+</html>
